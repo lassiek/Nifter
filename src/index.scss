@@ -1,0 +1,133 @@
+@import './assets/reset.scss';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+body {
+  overflow-x: hidden;
+}
+
+:root {
+  --accent-color: '';
+  --accent-color--hover: '';
+
+  --additionally-color: '';
+
+  --bg-color: rgb(31, 23, 33);
+  --bg-op4-color: rgb(31, 23, 33, 0.4);
+  --bg-card-color: rgb(41, 33, 42);
+  --black-color: #000;
+  --black-op8-color: rgba(0, 0, 0, 0.8);
+  --black-op5-color: rgba(0, 0, 0, 0.5);
+  --black-op2-color: rgba(0, 0, 0, 0.2);
+  --black-op1-color: rgba(0, 0, 0, 0.1);
+
+  --text-color: #fff;
+  --text-op4-color: rgba(255, 255, 255, 0.4);
+  --text-op2-color: rgba(255, 255, 255, 0.2);
+  --text-purple-color: rgb(164, 87, 178);
+  --text-purple-op4-color: rgba(166, 88, 179, 0.4);
+  --shadow-color: rgba(221, 0, 255, 0.902);
+  --shadow-op4-color: rgba(221, 0, 255, 0.4);
+  // --text-op7-color: rgba(255, 255, 255, 0.7);
+  // --text-op9-color: rgba(255, 255, 255, 0.9);
+  // --grey-color: #666666;
+
+
+  // Colors 
+  --neon: rgb(143, 32, 161);
+  --purple: rgb(217, 0, 255);
+  --pink: #c264d1;
+  --new: #4DB4FF;
+  --new-op: rgba(77, 181, 255, 0.1);
+  --green: #4DFF7E;
+  --green-op: rgba(77, 255, 127, 0.1);
+  --red: #FF4D4D;
+  --red-op: rgba(255, 77, 77, 0.1);
+  --yellow: #FFF84D;
+  --yellow-op: rgba(255, 249, 77, 0.1);
+
+  --platinum: #80E0FF;
+  --platinum-op: rgba(128, 223, 255, 0.1);
+  --gold: #FFA800;
+  --gold-op: rgba(255, 170, 0, 0.1);
+  --silver: #fff;
+  --silver-op: rgba(255, 255, 255, 0.1);
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+
+  color-scheme: light dark;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+
+.container_big {
+  max-width: 1395px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1165px;
+  padding: 0 15px;
+  margin: 0 auto;
+
+}
+
+.active {
+  color: var(--text-color) !important;
+  text-shadow: 0px 0px 10px var(--shadow-color);
+  transition: all .4s ease;
+}
+
+.active::after {
+  content: '';
+  position: absolute;
+  top: 23px;
+  left: 0;
+  width: 100%;
+  height: 1.2px;
+  background: var(--text-color) !important;
+  border-radius: 4px;
+  scale: 0 1;
+  transform-origin: right;
+  transition: all 0.4s ease-in-out;
+
+  @media (max-width:1024px) {
+    width: 0;
+    height: 0;
+  }
+}
+
+.active:hover::after  {
+  scale: 1;
+  transform-origin: left;
+}
+
+.active svg {
+  filter: drop-shadow(0px 5px 10px var(--shadow-color));
+}
+
+.active path {
+  fill: var(--text-color);
+}
+
+button:active {
+  transform: translateY(3px);
+
+  transition: all 0.2s ease-in-out;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+}

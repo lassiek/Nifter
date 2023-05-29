@@ -1,0 +1,139 @@
+.footer{
+    padding: 130px 0;
+
+    .row {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 45px;
+        .copyright {
+            display: flex;
+            flex-direction: column;
+            max-width: 315px;
+            .text {
+                margin: 37px 0 25px;
+
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 200;
+                font-size: 18px;
+
+                color: var(--text-color);
+            }
+            .icons_row {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                .icon {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 30px;
+                    height: 31px;
+
+                    color: var(--text-purple-color);
+
+                    transition: all .3s ease;
+                    svg {
+                        transition: all .1s ease;
+                    }
+
+                    &:hover {
+                        color: var(--text-color);
+                        transform: translateY(-2px);
+                        transition: all .3s ease;
+                        svg {          
+                            filter: drop-shadow(0px 5px 10px var(--shadow-color));
+                        }
+                    }
+                }
+            }
+        }
+        .nav {
+            display: flex;
+            align-items: flex-start;
+            gap: 72px;
+            .col {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                .title {
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 120%;
+                    
+                    color: var(--text-purple-color);
+                }
+                .subtitle {
+                    position: relative;
+                    display: inline;
+
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 18px;
+                    line-height: 120%;
+                    
+                    color: var(--text-color);
+
+                    cursor: pointer;
+
+                    transition: all .3s ease;
+
+                    &:hover {
+                        color: var(--text-color);
+                        text-shadow: 3px 6px 10px var(--shadow-color);
+                        transition: all .3s ease;
+                    }
+        
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: 23px;
+                        left: 0;
+                        width: 100%;
+                        height: 1.2px;
+                        background: var(--text-color);
+                        border-radius: 4px;
+                        scale: 0 1;
+                        transform-origin: right;
+                        transition: all 0.4s ease;
+                    }
+                    
+                    &:hover::after  {
+                        scale: 1;
+                        transform-origin: left;
+                    }
+                }
+            }
+            @media (max-width:778px) {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                column-gap: 40px;
+                row-gap: 30px;
+            }
+            @media (max-width:450px) {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+        @media (max-width:1115px) {
+            flex-direction: column;
+            align-items: center;
+            .copyright {
+                max-width: 390px;
+                align-items: center;
+                text-align: center;
+            }
+            .nav {
+                gap: 30px;
+                .col {
+                    width: 178px;
+                    text-align: center;
+                }
+            }            
+        }
+    }
+}

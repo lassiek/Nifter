@@ -1,0 +1,224 @@
+.navbar {
+
+    .row {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 30px;
+
+        .link  {
+            position: relative;
+
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 121%;
+            
+            color: var(--text-op4-color);
+        
+            transition: all .4s ease;
+
+            &:hover {
+                color: var(--purple);
+                transition: all .3s ease;
+                text-shadow: 3px 6px 10px var(--shadow-color);
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 23px;
+                left: 0;
+                width: 100%;
+                height: 1.2px;
+                background: var(--purple);
+                border-radius: 4px;
+                scale: 0 1;
+                transform-origin: right;
+                transition: all 0.4s ease;
+            }
+            
+            &:hover::after  {
+                scale: 1;
+                transform-origin: left;
+            }
+        }
+    }
+
+    
+    .menuBurger {
+        display: none;
+        position: relative;
+        z-index: 999;
+    
+        top: 0;
+        left: 0;
+
+        svg {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    .dropdownInner {
+    
+        position: fixed;
+        z-index: 99;
+        
+        padding: 30px 15px 0;
+        top: 0;
+        right: 0;
+    
+        width: 100%;
+        height: 100vh;
+        background-color: var(--black-op2-color);
+    
+        opacity: 0;
+        pointer-events: none;
+    
+        transition: all .25s ease;
+        .open {
+            transform: translateX(0);
+            height: 100%;
+            
+            background-color: var(--black-op2-color);
+        
+            transition: all .25s ease-in;
+
+            .dropdown {
+                position: fixed;
+                z-index: 99;
+            
+                top: 70px;
+                right: 30px;
+            
+                width: 380px;
+            
+                background-color: var(--bg-color);
+                border-radius: 20px;
+        
+                .col {
+                    padding: 20px 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 20px;
+        
+                    .linkMobile {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                    
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: 300;
+                        font-size: 23px;
+                        line-height: 125%;
+                    
+                        color: var(--text-op4-color);
+        
+                        svg {
+                            width: 30px;
+                            height: 30px;
+                            color: var(--purple);
+                        }
+                    }
+        
+        
+                    .btns {
+                        padding: 0 15px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-evenly;
+                        flex-wrap: wrap;
+                        gap: 20px;
+                    
+                        width: 100%;
+        
+                        @media (max-width:450px) {
+                            flex-direction: column;
+        
+                        }
+                    }
+                } 
+            }
+        }
+    }
+
+  
+    
+    
+
+    .active {
+        opacity: 1;
+        pointer-events: all;
+    }
+    
+    @media (max-width:1060px) {
+
+        .row {
+            gap: 25px;
+        }
+    }
+
+    @media (max-width:1024px) {
+
+        .row {
+            display: none;
+        }
+    
+        .menuBurger {
+            display: block;
+        }
+
+
+    }
+
+    @media (max-width:787px) {
+        .dropdownInner {
+            background-color: var(--black-op8-color);
+    
+            transition: all .2s ease;
+            .open {
+                opacity: 1;
+                transform: translateX(0);
+            
+                transition: all .25s ease-in;
+                .dropdown {
+                    top: 80px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                
+                    width: 80%;
+                }
+            }
+        }
+    
+    
+          
+    }
+}
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

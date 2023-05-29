@@ -1,0 +1,14 @@
+.home {
+    display: grid;
+    row-gap: 130px;
+}
+
+@media (max-width:1024px) {
+    .header {
+        margin: 30px 0;
+    }
+
+    .btns {
+        display: none;
+    }
+}

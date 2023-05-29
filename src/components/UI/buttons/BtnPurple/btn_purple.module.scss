@@ -1,0 +1,20 @@
+.btn_purple {
+    padding: 11px 32px;
+
+    background: linear-gradient(90deg, rgb(136, 40, 152) 0%, rgb(144, 31, 163) 100%);
+    box-shadow: 3px 4px 8px rgba(201, 55, 225, 0.15);
+    border-radius: 10px;
+
+    font-family: 'Montserrat';
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 125%;
+
+    transition: all .3s ease;
+
+    &:hover {
+        box-shadow: 3px 4px 8px var(--text-op2-color);
+    
+        transition: all .3s ease;
+    }
+}

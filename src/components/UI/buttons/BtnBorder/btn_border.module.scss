@@ -1,0 +1,49 @@
+.btn_border {
+    padding: 11px 30px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+    background: var(--black-op2-color);
+    border: 1px solid var(--text-color);
+    border-radius: 10px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 125%;
+    color: var(--text-color);
+
+    transition: all .3s ease;
+
+    &:hover {
+        box-shadow: 3px 4px 8px var(--shadow-op4-color);
+    
+        transition: all .3s ease;
+    }
+
+
+    &[data-pink='true'] {
+        background: var(--black-op1-color);
+        transition: all .3s ease;
+        &:hover {
+            color: var(--pink);
+            border: 1px solid var(--pink);
+            box-shadow: 0 0 0 var(--shadow-op4-color);
+            transition: all .3s ease;
+        }
+    }
+    &[data-small='true'] {
+        padding: 10px 29px;
+
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 120%;
+    }
+}
+
+

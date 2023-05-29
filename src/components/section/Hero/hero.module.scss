@@ -1,0 +1,158 @@
+.hero {
+    .row {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        .block {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            
+            width: 50%;
+        }
+        .title {
+            margin: 53px 0 0;
+        
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 40px;
+            line-height: 122.5%;
+    
+            color: var(--text-color);
+        
+            max-width: 308px;
+        }
+        
+        .text {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 125%;
+    
+            color: var(--text-color);
+    
+            max-width: 461px;
+        }
+        
+        .btns {
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .statistics {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+    
+            .item {
+                display: flex;
+                align-items: center;
+                gap: 13px;
+            }
+            
+            .item svg {
+                width: 15px;
+                height: 21px;
+                color: var(--shadow-op4-color);
+            }
+            
+            .statistics_title {
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 120%;
+                
+                color: var(--text-color);
+            }
+            
+            .statistics_text {
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 200;
+                font-size: 16px;
+                line-height: 125%;
+                
+                
+                color: var(--text-color);
+            }
+        }
+        .statue {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .img {
+                max-width: 390px;
+            }
+            .neon {
+                position: absolute;
+                z-index: -1;
+                width: 432px;
+                height: 430px;
+                border-radius: 50%;
+                filter: blur(100px);
+                background: linear-gradient(to right, #c300ff, #7B138C);
+                animation: rotateGradient 5s ease-in-out infinite alternate;
+            }
+        }
+        @media (max-width: 1024px) {
+            align-items: center;
+            .statistics {
+                flex-direction: row;
+            }
+        }
+        @media (max-width: 678px) {
+            margin: 0 auto;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            .block {
+                align-items: center;
+                width: 100%;
+                text-align: center;
+            }
+
+            .title {
+                max-width: 80%;
+            }
+            .text {
+                max-width: 100%;
+            }
+        }
+    }
+    
+    .countdown {
+        display: flex;
+        justify-content: flex-end;
+        @media (max-width:1024px){
+            justify-content: center;
+        }
+    }
+}
+
+@keyframes rotateGradient {
+    0% {
+      background: linear-gradient(to right, #c300ff, #7B138C);
+      background-size: 400% 400%;
+      background-position: center;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+  
+  
+    100% {
+      background: linear-gradient(to right, #c300ff, #7B138C);
+      background-size: 400% 400%;
+      background-position: center;
+      transform: rotate(180deg);
+    }
+  }
+  

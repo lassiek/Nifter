@@ -1,0 +1,196 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  // margin: 0 15px;
+  padding: 10px 10px 25px 10px;
+  width: 401px;
+  height: 498px;
+
+  background: var(--bg-card-color);
+  border-radius: 47px;
+  box-shadow: 5px 5px 21px var(--black-op8-color);
+
+  transition: all .6s ease;
+
+  .card_top {
+    position: relative;
+
+    max-width: 380px;
+    max-height: 292px;
+    width: 100%;
+
+    .img_nft {
+      border-radius: 47px;
+      width: 100%;
+      max-height: 292px;
+      object-fit: cover;
+    }
+
+    .icon_like {
+      position: absolute;
+
+      display: flex;
+      justify-content: center;
+
+      top: 16px;
+      right: 29px;
+
+      padding: 4px;
+
+      color: var(--pink);
+      background: var(--text-op4-color);
+      border-radius: 8px;
+      cursor: pointer;
+
+      transition: all 0.1s ease;
+
+      svg {
+        width: 32px;
+        height: 24px;
+        transition: all 0.1s ease;
+      }
+      .pink {
+        width: 32px;
+        height: 24px;
+        fill: var(--pink);
+        transition: all 0.7s ease;
+      }
+    }
+    .avatar {
+      position: absolute;
+      left: 30px;
+      bottom: -8px;
+
+      width: 66px;
+      height: 54px;
+
+      border: 2px solid var(--bg-color);
+      border-radius: 23px;
+      object-fit: cover;
+    }
+  }
+  .card_botton {
+    padding: 0 7px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    width: 100%;
+    height: 100%;
+    .info {
+      transition: all 1s ease;
+      
+      .block {
+        margin: 10px 0 15px;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: auto;
+        grid-row-gap: 6px;
+        .name {
+          font-family: 'Montserrat';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 32px;
+          line-height: 122%;
+          
+          color: var(--text-color);
+        }
+        .price {
+          justify-self: end;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+  
+          padding: 6px 22px;
+  
+          border: 1px solid var(--text-purple-color);
+          border-radius: 10px;
+          
+          font-family: 'Montserrat';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 121%;
+  
+          color: var(--text-purple-color);
+        } 
+        .author {
+          font-family: 'Montserrat';
+          font-style: normal;
+          font-weight: 200;
+          font-size: 15px;
+          line-height: 120%;
+          
+          color: var(--text-color);
+        }
+        .in_stock {
+          margin-right: 20px;
+          justify-self: end;
+
+          font-family: 'Montserrat';
+          font-style: normal;
+          font-weight: 200;
+          font-size: 15px;
+          line-height: 120%;
+          
+          color: var(--text-purple-color);
+        }
+      }
+
+      .bid {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 120%;
+
+        color: var(--text-color);
+        span {
+          color: var(--text-purple-color);
+        }
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+    .btn {
+      padding: 0 33px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}
+
+.active {
+  width: 401px;
+  min-height: 588px;
+  padding: 10px 10px 40px 10px;
+
+  .card_top {
+    max-width: 380px;
+    min-height: 342px;
+    width: 100%;
+
+    .img_nft {
+      min-height: 342px;
+    }
+
+    .avatar {
+      width: 66px;
+      height: 63px;
+
+      bottom: -17px;
+    }
+  }
+}

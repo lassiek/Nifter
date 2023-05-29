@@ -1,0 +1,239 @@
+.place_bid {
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--black-op5-color);
+    opacity: 0;
+    pointer-events: none;
+    transition: all .4s ease;
+
+    .content {
+        position: relative;
+        padding: 30px;
+        width: 510px;
+        display: grid;
+        gap: 30px;
+        background: var(--bg-color);
+        border-radius: 30px;
+        transform: scale(0.7);
+        transition: all .2s ease-in;
+
+        .title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 0 15px;
+            border-bottom: 2px solid var(--bg-card-color);
+
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 22px;
+            line-height: 121%;
+
+            color: var(--text-color);
+
+            .btn_close {
+
+                svg {
+                    width: 29px;
+                    height: 29px;
+                }
+            }
+        }
+
+        .info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            .img_nft {
+                width: 200px;
+                height: 100%;
+                min-height: 200px;
+                border-radius: 20px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 20px;
+                }
+            }
+            .block {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 20px;
+                width: 60%;
+                height: 100%;
+                .name {
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 26px;
+                    line-height: 121%;
+        
+                    color: var(--text-color);
+                }
+                .text {
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 200;
+                    font-size: 18px;
+                    line-height: 120%;
+                    
+                    color: var(--text-op4-color);
+                }
+                .author {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 200;
+                    font-size: 22px;
+                    line-height: 120%;
+                    
+                    color: var(--text-color);
+                    .avatar {
+                        width: 55px;
+                        height: 55px;
+                  
+                        border-radius: 20px;
+                        box-shadow: 5px 5px 8px var(--black-op5-color);
+                        object-fit: cover;
+                    }
+                }
+            }
+        } 
+        .change_bid {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 35px;
+            border: 2px solid var(--bg-card-color);
+            border-radius: 20px;
+            .btn_bid {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 12px;
+                background-color: var(--bg-card-color);
+                border-radius: 7px; 
+                transition: all 0.2s ease;
+                svg {
+                    width: 19px;
+                    height: 19px;
+                }
+            }
+            .inactive {
+                opacity: 0.3;
+                cursor: auto;
+                transition: all 0.2s ease;
+                &:active {
+                    transform: translateY(0px);
+                }
+            }
+            .bid {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 22px;
+                line-height: 121%;
+    
+                color: var(--text-color);
+
+                transition: all .2s ease;
+                svg {
+                    width: 20px;
+                }
+                // display: flex;
+                // flex-direction: column;
+                // align-items: center;
+                // gap: 5px;
+                // .eth {
+                //     display: flex;
+                //     align-items: center;
+                //     gap: 8px;
+    
+                //     font-family: 'Montserrat';
+                //     font-style: normal;
+                //     font-weight: 500;
+                //     font-size: 22px;
+                //     line-height: 121%;
+        
+                //     color: var(--text-color);
+                //     svg {
+                //         width: 20px;
+                //     }
+                // }
+                // .dollar {
+                //     font-family: 'Montserrat';
+                //     font-style: normal;
+                //     font-weight: 200;
+                //     font-size: 16px;
+                //     line-height: 120%;
+                    
+                //     color: var(--text-op4-color);    
+                // }
+            }
+        }
+        .min_price {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+    
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 15px;
+            line-height: 120%;
+    
+            color: var(--text-op4-color);
+            text-align: center;
+            span {
+              color: var(--text-purple-color);
+            }
+            svg {
+              width: 20px;
+              height: 20px;
+            }
+        }
+
+        .btns {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 530px) {
+        padding: 0 15px;
+        .content {
+            width: 100%;
+        }
+    }
+}
+.active {
+    opacity: 1;
+    pointer-events: all;
+    .content {
+        transform: scale(1);
+        transition: all .2s ease-in;
+    }
+}
